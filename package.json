@@ -1,12 +1,13 @@
 {
-  "name": "desafioalwaysmusic",
+  "name": "api-alwaysmusic",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node_modules\\.bin\\nodemon.cmd"
+    "dev-win": "node_modules\\.bin\\nodemon.cmd"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {

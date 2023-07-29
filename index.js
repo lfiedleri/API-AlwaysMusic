@@ -42,18 +42,21 @@ app.get('/create', async (req, res) => {
     }
 });
 
-// localhost:3000/updateRet?id=4&email=myemail@mail.com
-// app.get('/updateRet', async (req, res) => {
-//     try {
-//         id = req.query.id;
-//         email = req.query.email;
-//         const user = await modifyUserReturning(id, email);
-//         console.log(`Se ha modificado el usuario id ${id} con nuevo email ${email}`);
-//         res.json(user);
-//     } catch (error) {
-//         res.status(500).send(error.message);
-//     }
-// });
+//localhost:3000/updateRet?rut=7.777.777-7&nombre=Francisco+Vergara&curso=ballet&nivel5
+app.get('/updateRet', async (req, res) => {
+    try {
+        rut = req.query.rut;
+        nombre = req.query.nombre;
+        curso = req.query.curso;
+        nivel = req.query.nivel;
+        const user = await modifyStudentReturning(rut, nombre, curso, nivel);
+        console.log(`Se ha modificado el usuario rut ${rut}, 
+        ${nombre}, para el curso ${ballet} en el nivel ${nivel}`);
+        res.json(user);
+    } catch (error) {
+        res.status(500).send(error.message);
+    }
+});
 
 // localhost:3000/deleteRet?id=6
 // app.get('/deleteRet', async (req, res) => {
